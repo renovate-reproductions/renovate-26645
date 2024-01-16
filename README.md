@@ -1,4 +1,4 @@
-See https://github.com/renovatebot/renovate/discussions/26645#discussioncomment-8137039 for issue description
+See https://github.com/renovatebot/renovate/discussions/26645 for issue description
 
 Run using Docker
 
