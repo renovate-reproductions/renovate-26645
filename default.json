@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Best practices with merge confidence",
+  "extends": [
+    "config:best-practices",
+    "mergeConfidence:all-badges"
+  ],
+  "customManagers": [
+    {
+      "description": "Jenkinsfile deployHelmChart",
+      "customType": "regex",
+      "fileMatch": [
+        "Jenkinsfile"
+      ],
+      "matchStringsStrategy": "recursive",
+      "matchStrings": [
+        "deployHelmChart\\s*{\\s|.*chartName\\s*=\\s*[\\\"'](?<chartName>.+)[\\\"']\\s|.*chartVersion\\s*=\\s*[\\\"'](?<currentValue>.+)[\\\"']\\s|.*chartRepo\\s*=\\s*[\\\"'](?<chartRepo>.+)[\\\"']"
+      ],
+      "depNameTemplate": "my-host/artifactory/{{{chartRepo}}}/{{{chartName}}}",
+      "versioningTemplate": "semver",
+      "datasourceTemplate": "helm"
+    }
+  ]
+}
