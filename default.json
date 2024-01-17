@@ -12,7 +12,6 @@
       "fileMatch": [
         "Jenkinsfile"
       ],
-      "matchStringsStrategy": "recursive",
       "matchStrings": [
         "deployHelmChart\\s*{\\s|.*chartName\\s*=\\s*[\\\"'](?<chartName>.+)[\\\"']\\s|.*chartVersion\\s*=\\s*[\\\"'](?<currentValue>.+)[\\\"']\\s|.*chartRepo\\s*=\\s*[\\\"'](?<chartRepo>.+)[\\\"']"
       ],
